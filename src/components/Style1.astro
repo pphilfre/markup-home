@@ -1,12 +1,12 @@
 ---
 ---
-<main class="relative isolate hidden min-h-screen overflow-hidden bg-[hsl(var(--background))] text-[hsl(var(--foreground))] md:block">
+<main class="relative isolate hidden min-h-screen overflow-hidden text-[hsl(var(--foreground))] md:block">
   <div class="pointer-events-none absolute inset-0">
     <div class="absolute left-1/2 top-[-62rem] h-[1660px] w-[2720px] -translate-x-1/2 rounded-[50%] bg-[radial-gradient(ellipse_at_center,_rgba(138,216,255,0.95)_0%,_rgba(102,196,255,0.84)_18%,_rgba(66,164,255,0.72)_34%,_rgba(36,132,255,0.58)_49%,_rgba(16,96,238,0.4)_63%,_rgba(8,58,188,0.24)_75%,_transparent_90%)] [mask-image:radial-gradient(ellipse_at_center,_transparent_46%,_rgba(0,0,0,0.08)_51%,_rgba(0,0,0,0.36)_56%,_rgba(0,0,0,0.68)_62%,_rgba(0,0,0,0.84)_69%,_rgba(0,0,0,0.58)_76%,_rgba(0,0,0,0.2)_84%,_transparent_91%)] blur-[96px]"></div>
     <div class="absolute left-1/2 top-[8.5rem] h-[320px] w-[700px] -translate-x-[-22%] rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(228,248,255,0.56)_0%,_rgba(176,226,255,0.36)_36%,_rgba(106,188,255,0.18)_60%,_transparent_88%)] blur-[88px]"></div>
   </div>
 
-  <div class="relative mx-auto max-w-6xl px-6 pb-24 pt-10 md:px-10">
+  <div class="relative z-20 mx-auto max-w-6xl px-6 pb-24 pt-10 md:px-10">
     <header class="flex items-center justify-between px-1 py-3 text-sm md:px-2">
       <a href="#" class="text-base font-semibold tracking-tight text-white">markup<span class="text-cyan-300">|</span></a>
       <nav class="hidden items-center gap-12 text-slate-300 md:flex">
@@ -22,7 +22,7 @@
       </a>
     </header>
 
-    <section class="mx-auto mt-16 max-w-4xl text-center md:mt-24 animate-rise">
+    <section class="mx-auto mt-16 max-w-4xl text-center md:mt-24 animate-rise" data-hero-copy>
       <h1 class="text-pretty text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-7xl">
         The Markdown Workspace
         <span class="bg-gradient-to-r from-white via-blue-100 to-cyan-300 bg-clip-text text-transparent">For High-Context Teams</span>
@@ -46,20 +46,27 @@
       </div>
     </section>
 
-    <section class="relative mt-16 rounded-3xl border border-white/10 bg-[linear-gradient(180deg,rgba(11,19,52,0.95),rgba(5,9,27,0.95))] p-5 shadow-[0_0_90px_rgba(23,73,200,0.26)] md:mt-20 md:p-8">
-      <div class="pointer-events-none absolute inset-0 rounded-3xl border border-cyan-400/8"></div>
-      <div class="surface-soft overflow-hidden rounded-2xl p-3 md:p-4">
-        <div class="mb-4 flex gap-2 px-2 pt-1">
-          <span class="h-2.5 w-2.5 rounded-full bg-red-400"></span>
-          <span class="h-2.5 w-2.5 rounded-full bg-amber-300"></span>
-          <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+    <section class="hero-app-stage relative left-1/2 mt-16 w-screen -translate-x-1/2 md:mt-20" data-hero-app-stage>
+      <div class="flex min-h-[100svh] items-start justify-center overflow-hidden">
+        <div
+          data-hero-app-card
+          class="relative w-screen max-w-none rounded-t-[2rem] border border-white/10 border-b-0 bg-[linear-gradient(180deg,rgba(11,19,52,0.95),rgba(5,9,27,0.95))] p-4 shadow-[0_0_90px_rgba(23,73,200,0.26)] will-change-transform md:p-5"
+        >
+          <div class="pointer-events-none absolute inset-0 rounded-t-[2rem] border border-cyan-400/8"></div>
+          <div class="surface-soft overflow-hidden rounded-t-[1.4rem] rounded-b-none p-3 md:p-4">
+            <div class="mb-3 flex gap-2 px-2 pt-1">
+              <span class="h-2.5 w-2.5 rounded-full bg-red-400"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-300"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+            </div>
+            <img
+              src="/app.png"
+              alt="Markup app interface preview"
+              class="block h-auto w-full rounded-t-xl rounded-b-none border border-white/10 border-b-0"
+              loading="eager"
+            />
+          </div>
         </div>
-        <img
-          src="/app.png"
-          alt="Markup app interface preview"
-          class="h-auto w-full rounded-xl border border-white/10 object-cover"
-          loading="eager"
-        />
       </div>
     </section>
 
@@ -218,6 +225,74 @@
       </div>
     </section>
   </div>
+
+  <script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const setupHeroCardAnimation = () => {
+      const stage = document.querySelector<HTMLElement>("[data-hero-app-stage]");
+      const card = document.querySelector<HTMLElement>("[data-hero-app-card]");
+
+      if (!stage || !card) {
+        return;
+      }
+
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        card.style.transform = "none";
+        return;
+      }
+
+      const existing = ScrollTrigger.getById("hero-app-card-scale");
+      if (existing) {
+        existing.kill();
+      }
+
+      gsap.killTweensOf(card);
+      gsap.set(card, { clearProps: "transform" });
+
+      const startScale = 1;
+
+      gsap.set(card, {
+        scale: startScale,
+        yPercent: 0,
+        transformOrigin: "center bottom"
+      });
+
+      gsap.to(card, {
+        scale: 0.62,
+        yPercent: -18,
+        ease: "none",
+        scrollTrigger: {
+          id: "hero-app-card-scale",
+          trigger: stage,
+          start: "top 82%",
+          end: "bottom top+=10%",
+          scrub: true,
+          invalidateOnRefresh: true
+        }
+      });
+    };
+
+    let resizeFrame: number | undefined;
+
+    const queueHeroCardRefresh = () => {
+      if (resizeFrame !== undefined) {
+        cancelAnimationFrame(resizeFrame);
+      }
+      resizeFrame = requestAnimationFrame(setupHeroCardAnimation);
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", setupHeroCardAnimation, { once: true });
+    } else {
+      setupHeroCardAnimation();
+    }
+
+    window.addEventListener("resize", queueHeroCardRefresh);
+  </script>
 
   <script is:inline>
     (() => {

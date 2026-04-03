@@ -14,8 +14,78 @@ import '../styles/global.css';
 <title>Markup - Keyboard-First Markdown Workspace</title>
 <meta name="description" content="Markup is a fast, keyboard-first markdown workspace with live preview, graph view, whiteboards, mind maps, and cloud sync." />
 </head>
-<body>
+<body class="is-loading">
+<div id="page-loader" class="page-loader" aria-hidden="true">
+	<div class="page-loader__wash">
+		<svg class="page-loader__svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMin slice">
+			<defs>
+				<linearGradient id="loader-wash-gradient" x1="0" y1="0" x2="99" y2="99" gradientUnits="userSpaceOnUse">
+					<stop offset="0.12" stop-color="rgb(8, 58, 188)" />
+					<stop offset="0.52" stop-color="rgb(36, 132, 255)" />
+					<stop offset="0.9" stop-color="rgb(138, 216, 255)" />
+				</linearGradient>
+			</defs>
+			<path
+				class="page-loader__path"
+				stroke="url(#loader-wash-gradient)"
+				fill="url(#loader-wash-gradient)"
+				stroke-width="2"
+				vector-effect="non-scaling-stroke"
+				d="M 0 0 V 100 Q 50 100 100 100 V 0 z"
+			>
+				<animate
+					id="page-loader-release"
+					attributeName="d"
+					begin="indefinite"
+					dur="0.68s"
+					fill="freeze"
+					keyTimes="0;0.5;1"
+					keySplines="0.4 0 0.2 1;0.2 0.9 0.2 1"
+					calcMode="spline"
+					values="M 0 0 V 100 Q 50 100 100 100 V 0 z;
+									M 0 0 V 52 Q 50 8 100 52 V 0 z;
+									M 0 0 V 0 Q 50 0 100 0 V 0 z"
+				/>
+			</path>
+		</svg>
+	</div>
+</div>
 <Style1 />
 <Style1Mobile />
+
+<script is:inline>
+	(() => {
+		const loader = document.getElementById("page-loader");
+		const releaseAnimation = document.getElementById("page-loader-release");
+		if (!loader) {
+			return;
+		}
+
+		const reverseClickDelayMs = 420;
+		const releaseDurationMs = 680;
+		const fadeOutMs = 180;
+
+		const beginRelease = () => {
+			if (releaseAnimation && "beginElement" in releaseAnimation) {
+				releaseAnimation.beginElement();
+			}
+
+			window.setTimeout(() => {
+				loader.classList.add("is-leaving");
+			}, releaseDurationMs);
+
+			window.setTimeout(() => {
+				document.body.classList.remove("is-loading");
+				loader.remove();
+			}, releaseDurationMs + fadeOutMs + 40);
+		};
+
+		window.setTimeout(beginRelease, reverseClickDelayMs);
+
+		window.addEventListener("pagehide", () => {
+			loader.classList.add("is-leaving");
+		});
+	})();
+</script>
 </body>
 </html>

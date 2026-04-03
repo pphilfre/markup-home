@@ -26,6 +26,40 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+body.is-loading {
+	overflow: hidden;
+}
+
+.page-loader {
+	position: fixed;
+	inset: 0;
+	z-index: 2147483647;
+	overflow: hidden;
+	background: transparent;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+	transition: opacity 220ms ease-out, visibility 220ms step-end;
+}
+
+.page-loader.is-leaving {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.page-loader__wash,
+.page-loader__svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.page-loader__path {
+	transform-origin: center;
+	filter: drop-shadow(0 8px 26px rgba(36, 132, 255, 0.34));
+}
+
 @layer components {
 	.surface {
 		border: 1px solid color-mix(in oklab, hsl(var(--border)) 82%, transparent);
@@ -628,6 +662,11 @@ body {
 	.share-tracer,
 	.share-lock {
 		animation: none;
+	}
+
+	.page-loader,
+	.page-loader__path {
+		transition: none;
 	}
 
 	.sync-chip,
