@@ -1,6 +1,6 @@
 ---
 ---
-<main class="relative isolate min-h-screen overflow-hidden bg-[hsl(var(--background))] text-[hsl(var(--foreground))]">
+<main class="relative isolate hidden min-h-screen overflow-hidden bg-[hsl(var(--background))] text-[hsl(var(--foreground))] md:block">
   <div class="pointer-events-none absolute inset-0">
     <div class="absolute left-1/2 top-[-62rem] h-[1660px] w-[2720px] -translate-x-1/2 rounded-[50%] bg-[radial-gradient(ellipse_at_center,_rgba(138,216,255,0.95)_0%,_rgba(102,196,255,0.84)_18%,_rgba(66,164,255,0.72)_34%,_rgba(36,132,255,0.58)_49%,_rgba(16,96,238,0.4)_63%,_rgba(8,58,188,0.24)_75%,_transparent_90%)] [mask-image:radial-gradient(ellipse_at_center,_transparent_46%,_rgba(0,0,0,0.08)_51%,_rgba(0,0,0,0.36)_56%,_rgba(0,0,0,0.68)_62%,_rgba(0,0,0,0.84)_69%,_rgba(0,0,0,0.58)_76%,_rgba(0,0,0,0.2)_84%,_transparent_91%)] blur-[96px]"></div>
     <div class="absolute left-1/2 top-[8.5rem] h-[320px] w-[700px] -translate-x-[-22%] rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(228,248,255,0.56)_0%,_rgba(176,226,255,0.36)_36%,_rgba(106,188,255,0.18)_60%,_transparent_88%)] blur-[88px]"></div>
@@ -11,10 +11,10 @@
       <a href="#" class="text-base font-semibold tracking-tight text-white">markup<span class="text-cyan-300">|</span></a>
       <nav class="hidden items-center gap-12 text-slate-300 md:flex">
         <a class="transition hover:text-white" href="https://github.com/pphilfre/markup-home">GitHub</a>
-        <a class="transition hover:text-white" href="#how-it-works">Docs</a>
+        <a class="transition hover:text-white" href="https://docs.markup.freddiephilpot.dev">Docs</a>
         <a class="transition hover:text-white" href="#about">About</a>
       </nav>
-      <a class="btn-ghost inline-flex items-center gap-2 px-5 py-2 text-xs md:text-sm" href="#">
+      <a class="btn-ghost inline-flex items-center gap-2 px-5 py-2 text-xs md:text-sm" href="https://markup.freddiephilpot.dev?source=home&version=latest&platform=web">
         <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
           <path d="M13 5a1 1 0 1 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V6.41l-8.3 8.3a1 1 0 0 1-1.4-1.42L16.59 5H13ZM5 7a2 2 0 0 1 2-2h2a1 1 0 1 1 0 2H7v10h10v-2a1 1 0 1 1 2 0v2a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7Z"></path>
         </svg>
@@ -31,13 +31,13 @@
         Markup combines keyboard-first writing, live markdown preview, graph view, whiteboards, and mind maps so every note stays connected and actionable.
       </p>
       <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <a class="btn-primary inline-flex items-center gap-2 px-7 py-3 text-sm" href="#" data-download-button>
+        <a class="btn-primary inline-flex items-center gap-2 px-7 py-3 text-sm" href="https://github.com/pphilfre/markup/releases?version=latest&platform=desktop" data-download-button>
           <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
             <path data-download-icon d="M11 4a1 1 0 1 1 2 0v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.42l2.3 2.3V4ZM5 18a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"></path>
           </svg>
           <span data-download-text>Download for Desktop</span>
         </a>
-        <a class="btn-ghost inline-flex items-center gap-2 px-7 py-3 text-sm" href="#">
+        <a class="btn-ghost inline-flex items-center gap-2 px-7 py-3 text-sm" href="https://markup.freddiephilpot.dev?source=home&version=latest&platform=web">
           <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
             <path d="M13 5a1 1 0 1 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V6.41l-8.3 8.3a1 1 0 0 1-1.4-1.42L16.59 5H13ZM5 7a2 2 0 0 1 2-2h2a1 1 0 1 1 0 2H7v10h10v-2a1 1 0 1 1 2 0v2a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7Z"></path>
           </svg>
@@ -215,13 +215,13 @@
         Download Markup for your platform and jump right into your keyboard-first markdown workspace.
       </p>
       <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <a class="btn-primary inline-flex items-center gap-2 px-7 py-3 text-sm" href="#" data-download-button>
+        <a class="btn-primary inline-flex items-center gap-2 px-7 py-3 text-sm" href="https://github.com/pphilfre/markup/releases?version=latest&platform=desktop" data-download-button>
           <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
             <path data-download-icon d="M11 4a1 1 0 1 1 2 0v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.42l2.3 2.3V4ZM5 18a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"></path>
           </svg>
           <span data-download-text>Download for Desktop</span>
         </a>
-        <a class="btn-ghost inline-flex items-center gap-2 px-7 py-3 text-sm" href="#">
+        <a class="btn-ghost inline-flex items-center gap-2 px-7 py-3 text-sm" href="https://markup.freddiephilpot.dev?source=home&version=latest&platform=web">
           <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
             <path d="M13 5a1 1 0 1 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V6.41l-8.3 8.3a1 1 0 0 1-1.4-1.42L16.59 5H13ZM5 7a2 2 0 0 1 2-2h2a1 1 0 1 1 0 2H7v10h10v-2a1 1 0 1 1 2 0v2a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7Z"></path>
           </svg>
@@ -235,6 +235,9 @@
     (() => {
       const ua = navigator.userAgent || "";
       const platform = navigator.platform || "";
+      const releasesUrl = "https://github.com/pphilfre/markup/releases";
+      const latestManifestUrl = "https://github.com/pphilfre/markup/releases/latest/download/latest.json";
+      const pwaUrl = "https://markup.freddiephilpot.dev";
 
       const icons = {
         default: "M11 4a1 1 0 1 1 2 0v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.42l2.3 2.3V4ZM5 18a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z",
@@ -243,19 +246,44 @@
         windows: "M3 4.5 10.5 3.4V11H3V4.5Zm10.5-1.5L21 2v9h-7.5V3ZM3 13h7.5v7.6L3 19.5V13Zm10.5 0H21v9l-7.5-1.1V13Z"
       };
 
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
+      const isMac = /Mac/i.test(platform) || /Mac OS X/i.test(ua);
+      const isWindows = /Win/i.test(platform) || /Windows/i.test(ua);
+
       let label = "Download for Desktop";
       let iconPath = icons.default;
+      let platformKey = "desktop";
+      let fallbackUrl = `${releasesUrl}?version=latest&platform=desktop`;
 
-      if (/Android|iPhone|iPad|iPod/i.test(ua)) {
-        label = "Download for Mobile";
+      if (isMobile) {
+        label = "Open Markup PWA";
         iconPath = icons.mobile;
-      } else if (/Mac/i.test(platform) || /Mac OS X/i.test(ua)) {
+        platformKey = "mobile-pwa";
+        fallbackUrl = `${pwaUrl}?source=home&version=latest&platform=mobile`;
+      } else if (isMac) {
         label = "Download for macOS";
         iconPath = icons.macos;
-      } else if (/Win/i.test(platform) || /Windows/i.test(ua)) {
+        platformKey = "darwin-aarch64";
+        fallbackUrl = `${releasesUrl}?version=latest&platform=darwin-aarch64`;
+      } else if (isWindows) {
         label = "Download for Windows";
         iconPath = icons.windows;
+        platformKey = "windows-x86_64-nsis";
+        fallbackUrl = `${releasesUrl}?version=latest&platform=windows-x86_64-nsis`;
       }
+
+      const downloadButtons = Array.from(document.querySelectorAll("[data-download-button]"));
+
+      const setDownloadHref = (url) => {
+        downloadButtons.forEach((el) => {
+          el.setAttribute("href", url);
+        });
+      };
+
+      const withVersionTag = (url, version, detectedPlatform) => {
+        const sep = url.includes("?") ? "&" : "?";
+        return `${url}${sep}version=${encodeURIComponent(version)}&platform=${encodeURIComponent(detectedPlatform)}`;
+      };
 
       document.querySelectorAll("[data-download-text]").forEach((el) => {
         el.textContent = label;
@@ -264,6 +292,37 @@
       document.querySelectorAll("[data-download-icon]").forEach((el) => {
         el.setAttribute("d", iconPath);
       });
+
+      setDownloadHref(fallbackUrl);
+
+      if (isMobile) {
+        return;
+      }
+
+      fetch(latestManifestUrl)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Failed to fetch latest release manifest");
+          }
+          return response.json();
+        })
+        .then((manifest) => {
+          const releaseVersion = manifest?.version || "latest";
+          const platforms = manifest?.platforms || {};
+          const asset = platforms[platformKey]
+            || (isWindows ? platforms["windows-x86_64"] : null)
+            || (isMac ? platforms["darwin-aarch64-app"] : null);
+
+          if (!asset?.url) {
+            setDownloadHref(`${releasesUrl}?version=${encodeURIComponent(releaseVersion)}&platform=${encodeURIComponent(platformKey)}`);
+            return;
+          }
+
+          setDownloadHref(withVersionTag(asset.url, releaseVersion, platformKey));
+        })
+        .catch(() => {
+          setDownloadHref(fallbackUrl);
+        });
     })();
   </script>
 </main>
