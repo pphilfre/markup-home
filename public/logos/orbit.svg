@@ -1,0 +1,8 @@
+<svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 36" role="img" aria-labelledby="title">
+  <title>Orbit</title>
+  <g fill="none" fill-rule="evenodd">
+    <ellipse cx="18" cy="18" rx="10" ry="6" stroke="#FFFFFF" stroke-width="2.5"/>
+    <circle cx="24" cy="18" r="2.6" fill="#FFFFFF"/>
+    <text x="40" y="23" fill="#FFFFFF" font-family="Manrope, Segoe UI, sans-serif" font-size="16" font-weight="700" letter-spacing="1.1">ORBIT</text>
+  </g>
+</svg>

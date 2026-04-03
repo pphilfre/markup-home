@@ -1,0 +1,8 @@
+<svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 36" role="img" aria-labelledby="title">
+  <title>Heyday</title>
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="18" cy="18" r="9" fill="#FFFFFF"/>
+    <path d="M15 12h6v12h-6z" fill="#FFFFFF"/>
+    <text x="38" y="23" fill="#FFFFFF" font-family="Manrope, Segoe UI, sans-serif" font-size="16" font-weight="700" letter-spacing="1.1">HEYDAY</text>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 36" role="img" aria-labelledby="title">
+  <title>Arcline</title>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M9 24c0-7.2 5.8-13 13-13h6" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <path d="M9 24h20" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <text x="42" y="23" fill="#FFFFFF" font-family="Manrope, Segoe UI, sans-serif" font-size="16" font-weight="700" letter-spacing="1.1">ARCLINE</text>
+  </g>
+</svg>
