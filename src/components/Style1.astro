@@ -6,15 +6,15 @@
     <div class="absolute left-1/2 top-[8.5rem] h-[320px] w-[700px] -translate-x-[-22%] rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(228,248,255,0.56)_0%,_rgba(176,226,255,0.36)_36%,_rgba(106,188,255,0.18)_60%,_transparent_88%)] blur-[88px]"></div>
   </div>
 
-  <div class="relative z-20 mx-auto max-w-6xl px-6 pb-24 pt-10 md:px-10">
-    <header class="flex items-center justify-between px-1 py-3 text-sm md:px-2">
-      <a href="#" class="text-base font-semibold tracking-tight text-white">markup<span class="text-cyan-300">|</span></a>
-      <nav class="hidden items-center gap-12 text-slate-300 md:flex">
+  <div class="relative z-20 mx-auto max-w-6xl px-6 pb-20 pt-6 md:px-10 md:pt-8">
+    <header class="grid grid-cols-[1fr_auto_1fr] items-center px-1 py-2 text-sm md:px-2">
+      <a href="#" class="justify-self-start text-base font-semibold tracking-tight text-white">markup<span class="text-cyan-300">|</span></a>
+      <nav class="hidden items-center justify-self-center gap-12 text-slate-300 md:flex">
         <a class="transition hover:text-white" href="https://github.com/pphilfre/markup">GitHub</a>
         <a class="transition hover:text-white" href="https://docs.markup.freddiephilpot.dev">Docs</a>
         <a class="transition hover:text-white" href="https://freddiephilpot.dev">About</a>
       </nav>
-      <a class="btn-ghost inline-flex items-center gap-2 px-5 py-2 text-xs md:text-sm" href="https://markup.freddiephilpot.dev?source=home&version=latest&platform=web">
+      <a class="btn-ghost justify-self-end inline-flex items-center gap-2 px-5 py-2 text-xs md:text-sm" href="https://markup.freddiephilpot.dev?source=home&version=latest&platform=web">
         <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
           <path d="M13 5a1 1 0 1 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V6.41l-8.3 8.3a1 1 0 0 1-1.4-1.42L16.59 5H13ZM5 7a2 2 0 0 1 2-2h2a1 1 0 1 1 0 2H7v10h10v-2a1 1 0 1 1 2 0v2a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7Z"></path>
         </svg>
@@ -22,7 +22,7 @@
       </a>
     </header>
 
-    <section class="mx-auto mt-16 max-w-4xl text-center md:mt-24 animate-rise" data-hero-copy>
+    <section class="mx-auto mt-12 max-w-4xl text-center md:mt-16 animate-rise" data-hero-copy>
       <h1 class="text-pretty text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-7xl">
         The Markdown Workspace
         <span class="bg-gradient-to-r from-white via-blue-100 to-cyan-300 bg-clip-text text-transparent">For High-Context Teams</span>
@@ -46,8 +46,8 @@
       </div>
     </section>
 
-    <section class="hero-app-stage relative left-1/2 mt-16 w-screen -translate-x-1/2 md:mt-20" data-hero-app-stage>
-      <div class="flex min-h-[100svh] items-start justify-center overflow-hidden">
+    <section class="hero-app-stage relative left-1/2 mt-12 w-screen -translate-x-1/2 md:mt-14" data-hero-app-stage>
+      <div class="flex min-h-[72svh] items-start justify-center overflow-hidden md:min-h-[78svh]">
         <div
           data-hero-app-card
           class="relative w-screen max-w-none rounded-t-[2rem] border border-white/10 border-b-0 bg-[linear-gradient(180deg,rgba(11,19,52,0.95),rgba(5,9,27,0.95))] p-4 shadow-[0_0_90px_rgba(23,73,200,0.26)] will-change-transform md:p-5"
@@ -70,9 +70,9 @@
       </div>
     </section>
 
-    <section id="how-it-works" class="mt-24 md:mt-28">
+    <section id="how-it-works" class="mt-14 md:mt-16">
       <h2 class="text-center text-4xl font-semibold text-white md:text-5xl">How It Works</h2>
-      <div id="features" class="mt-12 space-y-12 md:mt-14 md:space-y-16">
+      <div id="features" class="mt-10 space-y-12 md:mt-12 md:space-y-16">
         <article class="grid min-h-[380px] items-center gap-y-10 md:min-h-[430px] md:grid-cols-2 md:gap-x-16 lg:gap-x-24">
           <div class="max-w-xl">
             <p class="text-xs uppercase tracking-[0.18em] text-cyan-200">Works everywhere</p>
@@ -203,27 +203,39 @@
       </div>
     </section>
 
-    <section id="cta" class="mt-24 rounded-3xl border border-cyan-300/20 bg-[linear-gradient(160deg,rgba(6,18,46,0.95),rgba(8,32,82,0.82))] px-6 py-14 text-center shadow-[0_0_60px_rgba(34,134,255,0.26)] md:px-12">
-      <p class="text-xs uppercase tracking-[0.2em] text-cyan-100/80">Markup</p>
-      <h3 class="mt-4 text-3xl font-semibold text-white md:text-4xl">Build your second brain in markdown.</h3>
-      <p class="mx-auto mt-4 max-w-2xl text-slate-300">
-        Download Markup for your platform and jump right into your keyboard-first markdown workspace.
-      </p>
-      <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <a class="btn-primary inline-flex items-center gap-2 px-7 py-3 text-sm" href="https://github.com/pphilfre/markup/releases?version=latest&platform=desktop" data-download-button>
+    <footer id="cta" class="mt-20 rounded-3xl border border-cyan-300/20 bg-[linear-gradient(150deg,rgba(6,17,44,0.96),rgba(7,24,64,0.9))] px-6 py-10 shadow-[0_0_52px_rgba(22,102,235,0.22)] md:px-10">
+      <div class="grid gap-8 md:grid-cols-[minmax(0,1.2fr)_auto] md:items-start">
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-cyan-100/80">Markup</p>
+          <h3 class="mt-3 text-3xl font-semibold text-white md:text-4xl">Build your second brain in markdown.</h3>
+          <p class="mt-3 max-w-2xl text-slate-300">
+            Download Markup for your platform and jump right into your keyboard-first markdown workspace.
+          </p>
+          <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-slate-300">
+            <a class="transition hover:text-white" href="https://github.com/pphilfre/markup">GitHub</a>
+            <a class="transition hover:text-white" href="https://docs.markup.freddiephilpot.dev">Docs</a>
+            <a class="transition hover:text-white" href="https://freddiephilpot.dev">About</a>
+          </div>
+        </div>
+        <div class="flex flex-col items-stretch gap-3 sm:flex-row md:flex-col">
+          <a class="btn-primary inline-flex items-center justify-center gap-2 px-7 py-3 text-sm" href="https://github.com/pphilfre/markup/releases?version=latest&platform=desktop" data-download-button>
           <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
             <path data-download-icon d="M11 4a1 1 0 1 1 2 0v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.42l2.3 2.3V4ZM5 18a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"></path>
           </svg>
           <span data-download-text>Download for Desktop</span>
         </a>
-        <a class="btn-ghost inline-flex items-center gap-2 px-7 py-3 text-sm" href="https://markup.freddiephilpot.dev?source=home&version=latest&platform=web">
+          <a class="btn-ghost inline-flex items-center justify-center gap-2 px-7 py-3 text-sm" href="https://markup.freddiephilpot.dev?source=home&version=latest&platform=web">
           <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
             <path d="M13 5a1 1 0 1 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V6.41l-8.3 8.3a1 1 0 0 1-1.4-1.42L16.59 5H13ZM5 7a2 2 0 0 1 2-2h2a1 1 0 1 1 0 2H7v10h10v-2a1 1 0 1 1 2 0v2a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7Z"></path>
           </svg>
           <span>Open on Web</span>
         </a>
+        </div>
       </div>
-    </section>
+      <div class="mt-8 border-t border-white/10 pt-4 text-xs text-slate-400">
+        © {new Date().getFullYear()} Markup. Built for high-context teams.
+      </div>
+    </footer>
   </div>
 
   <script>
